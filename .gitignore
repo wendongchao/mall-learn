@@ -8,4 +8,4 @@ mall-tiny-02/target/generated-test-sources/
 
 
 # 因为有Redis，不能提交
-/mall-tiny-03/src/main/resources/application.yml
+mall-tiny-03/src/main/resources/application.yml
