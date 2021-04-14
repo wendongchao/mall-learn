@@ -67,6 +67,7 @@
             <artifactId>springfox-swagger2</artifactId>
             <version>2.9.2</version>
             <exclusions>
+                <!--剔除不合适的依赖-->
                 <exclusion>
                     <groupId>io.swagger</groupId>
                     <artifactId>swagger-models</artifactId>
