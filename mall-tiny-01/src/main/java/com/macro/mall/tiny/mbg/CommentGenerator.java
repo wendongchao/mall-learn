@@ -13,6 +13,7 @@ import java.util.Properties;
  * Created by macro on 2018/4/26.
  */
 public class CommentGenerator extends DefaultCommentGenerator {
+    //添加备注评论
     private boolean addRemarkComments = false;
 
     /**
