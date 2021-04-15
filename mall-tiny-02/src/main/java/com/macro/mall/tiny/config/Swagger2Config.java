@@ -40,7 +40,7 @@ public class Swagger2Config {
                 .version("1.0")
                 .contact(new Contact("test", "test", "test"))
                 .license("The Apache License")
-                .licenseUrl("http://localhost:8081/doc.html")//可以使用默认（swagger-ui.html）也可以自定义
+                .licenseUrl("http://localhost:8080/doc.html")//可以使用默认（swagger-ui.html）也可以自定义
                 .build();
     }
 }
