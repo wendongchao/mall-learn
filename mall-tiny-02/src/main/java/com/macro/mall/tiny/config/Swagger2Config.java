@@ -20,8 +20,7 @@ public class Swagger2Config {
     @Bean
     public Docket createRestApi(){
         return new Docket(DocumentationType.SWAGGER_2)
-//                .apiInfo(apiInfo())
-                .pathMapping("/")
+                .apiInfo(apiInfo())
                 .select()
                 //为当前包下controller生成API文档
                 .apis(RequestHandlerSelectors.basePackage("com.macro.mall.tiny.controller"))
@@ -30,7 +29,7 @@ public class Swagger2Config {
                 //为有@ApiOperation注解的方法生成API文档
 //                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 .paths(PathSelectors.any())
-                .build().apiInfo(apiInfo());
+                .build();
     }
 
     private ApiInfo apiInfo() {
