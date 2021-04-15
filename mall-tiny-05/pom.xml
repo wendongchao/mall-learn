@@ -65,12 +65,30 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.7.0</version>
+            <version>2.9.2</version>
+            <exclusions>
+                <!--剔除不合适的依赖-->
+                <exclusion>
+                    <groupId>io.swagger</groupId>
+                    <artifactId>swagger-models</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.7.0</version>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-models</artifactId>
+            <version>1.5.21</version>
+        </dependency>
+        <!--规范model实体类注解-->
+        <!--如果不加，则当实体类非String属性没有默认值时,会出现NumberFormatException: For input string:""，
+        这是因为springfox-swagger2(2.9.2)依赖于swagger-models(1.5.20)
+        该版本的swagger只判断了null没有判断空字串符
+        所以会将实体类中非String类型的属性默认赋值为空字符串;
+        而1.5.21版本之后新增了空串判断,所以就不会有该问题了-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
         </dependency>
         <!--redis依赖配置-->
         <dependency>
